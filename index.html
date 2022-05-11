@@ -88,8 +88,8 @@
                             Trợ giúp
                         </a>
                     </li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
-                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate" onclick="onRegister()">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong js-header__navbar-item__login" onclick="onLogin()">Đăng nhập</li>
                         <!-- <li class="header__navbar-item header__navbar-use">
                             <img src="./assets/img/165154028_1355343454846355_3662391207277475928_n.jpg" alt="" class="header__navbar-use-img">
                             <span class="header__navbar-use-name">Viết Quốc</span>
@@ -234,17 +234,16 @@
         </footer>
     </div>
     <!-- modal -->
-     <div class="modal"> 
-        <div class="modal__overlay"></div>
+     <div id="modal" class="modal" > 
+        <div class="modal__overlay" onclick="onBack()"></div>
         <div class="modal__body">
-            <div class="modal__inner">
-                
+            <div class="modal__inner"> 
                 <!-- register form -->
-                <div class="auth-form switch-register">
+                <div class="auth-form" id="switch-register">
                     <div class="auth-form__contaoner">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng ký</h3>
-                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                            <span class="auth-form__switch-btn" onclick="onLogin()">Đăng nhập</span>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
@@ -265,7 +264,7 @@
                             </p>
                         </div>
                         <div class="auth-form__controls">
-                            <button class="btn auth-form__control-back">Trở lại</button>
+                            <button class="btn auth-form__control-back" onclick="onBack()">Trở lại</button>
                             <button class="btn btn--primary">Đăng ký</button>
                         </div>
                     </div>
@@ -288,11 +287,11 @@
 
                 
                 <!-- login form -->
-             <div class="auth-form switch-login">
+             <div class="auth-form" id="switch-login">
                     <div class="auth-form__contaoner">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng nhập</h3>
-                            <span class="auth-form__switch-btn">Đăng ký</span>
+                            <span class="auth-form__switch-btn"onclick ="onRegister()">Đăng ký</span>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
@@ -310,7 +309,7 @@
                             </div>
                         </div>
                         <div class="auth-form__controls">
-                            <button class="btn auth-form__control-back">Trở lại</button>
+                            <button class="btn auth-form__control-back" onclick="onBack()">Trở lại</button>
                             <button class="btn btn--primary">Đăng Nhập</button>
                         </div>
                     </div>
@@ -335,5 +334,35 @@
         </div> 
      </div>
 </body>
-<div>sdsd</div>
+<script>
+    // regester
+    function onRegister(){
+        const register = document.getElementById("switch-register");
+        const login = document.getElementById("switch-login");
+        const modal = document.getElementById("modal");
+        register.style.display = "block";
+        login.style.display = "none";
+        modal.style.display = "flex";        
+    }
+
+    //login
+    function onLogin(){
+        const register = document.getElementById("switch-register");
+        const login = document.getElementById("switch-login");
+        const modal = document.getElementById("modal");
+        register.style.display = "none";
+        login.style.display = "block";
+        modal.style.display = "flex";  
+    }
+
+    //on back
+    function onBack() {
+        const register = document.getElementById("switch-register");
+        const login = document.getElementById("switch-login");
+        const modal = document.getElementById("modal");
+        register.style.display = "none";
+        login.style.display = "none";
+        modal.style.display = "none"; 
+    }
+</script>
 </html>
