@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.1-web/css/all.css">
+    <script src="main.js"></script>
 </head>
+
 <body>
     <div class="app">
         <header class="header">
@@ -285,7 +287,6 @@
                     </div>
                 </div> 
 
-                
                 <!-- login form -->
              <div class="auth-form" id="switch-login">
                     <div class="auth-form__contaoner">
@@ -334,35 +335,5 @@
         </div> 
      </div>
 </body>
-<script>
-    // regester
-    function onRegister(){
-        const register = document.getElementById("switch-register");
-        const login = document.getElementById("switch-login");
-        const modal = document.getElementById("modal");
-        register.style.display = "block";
-        login.style.display = "none";
-        modal.style.display = "flex";        
-    }
 
-    //login
-    function onLogin(){
-        const register = document.getElementById("switch-register");
-        const login = document.getElementById("switch-login");
-        const modal = document.getElementById("modal");
-        register.style.display = "none";
-        login.style.display = "block";
-        modal.style.display = "flex";  
-    }
-
-    //on back
-    function onBack() {
-        const register = document.getElementById("switch-register");
-        const login = document.getElementById("switch-login");
-        const modal = document.getElementById("modal");
-        register.style.display = "none";
-        login.style.display = "none";
-        modal.style.display = "none"; 
-    }
-</script>
 </html>
