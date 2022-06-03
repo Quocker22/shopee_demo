@@ -102,3 +102,22 @@ html{
     background-color: #f53f2d;
     margin-left: 3px;
 }
+
+
+/* err form login */
+
+#errForm{
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 0 !important;
+    color: red;
+    
+}
+
+.noLogin{
+    display: block;
+}
+
+.header__navbar-use-img{
+    display: none;
+}

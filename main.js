@@ -27,3 +27,9 @@ function onBack() {
     login.style.display = "none";
     modal.style.display = "none"; 
 }
+
+function closeUser(){
+    document.querySelector('.noLogin').style.display = 'block';
+    document.querySelector('.changeName').style.display = 'none';
+    document.querySelector('.header__navbar-use-img').style.display = 'none';
+}
