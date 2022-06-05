@@ -28,8 +28,34 @@ html{
 
 .grid__row{
     display: flex;
-    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 100%;
 }
+
+.grid__colum-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.3334%;
+}
+
+.grid__colum-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__colum-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.home-product{
+    display: flex;
+}
+
+
 
 @keyframes fadeIn{
     from{
@@ -93,9 +119,12 @@ html{
     font-size: 1.5rem;
     outline: none;
     cursor: pointer;
-    display: flex;
+    display:inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.09);
+
 }
 
 .btn.btn--primary{
@@ -120,4 +149,65 @@ html{
 
 .header__navbar-use-img{
     display: none;
+}
+
+
+/* gia */
+
+.selec-input{
+    position: relative;
+    height: 34px;
+    padding:  0 12px;
+    min-width: 120px;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.selec-input__label{
+    font-size: 1.4rem;
+    min-width: 200px;
+}
+
+.selec-input__icon{
+    font-size: 1.6rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;    
+}
+
+.selec-input:hover .selec-input__list{
+    display: block;
+}
+
+.selec-input__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 76%;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    list-style: none;
+    padding: 8px 16px;
+}
+
+.selec-input__link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    display: block;
+    padding: 5px 0 ;
+}
+
+.selec-input__link:hover{
+    color: #f12c1b;
+}
+
+/* box shadow */
+.box-shadow{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.09);
 }

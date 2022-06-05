@@ -24,7 +24,6 @@ function createUser(data , callBack){
 
 
 function handlecreateUserForm(register){
-   
    window.onload = function(){
         var createBtn = document.querySelector('.registerBtn');  
         createBtn.addEventListener('click',function(){
@@ -34,9 +33,11 @@ function handlecreateUserForm(register){
             var rePassWord = document.querySelector('input[name="rePassWord"]').value;
             var errRegister = document.querySelector('#errRegister');  
             if( name == '' || passWord == '' || rePassWord == ''){
-                errRegister.innerHTML = '<h2 id="errForm">Vui lòng điều đầy đủ thông tin</h2>';              
+                errRegister.innerHTML = '<h2 id="errForm">Vui lòng điều đầy đủ thông tin</h2>'; 
+                return false;             
             } else if(passWord != rePassWord && passWord !='' && rePassWord != ''){
                 errRegister.innerHTML = '<h2 id="errForm">Nhập lại mật khẩu không chính xác</h2>'; 
+                return false;             
             }else{
             var formData = {
                 name: name,
@@ -48,6 +49,7 @@ function handlecreateUserForm(register){
         }
         if(check)
             createUser(formData);
+            location.reload();
         })
     }   
 }
@@ -72,7 +74,7 @@ function login(register){
                 })
                 if(check == false){
                         var errLogin = document.querySelector('#errLogin');
-                        errLogin.innerHTML = '<h2 id="errForm">Tên tài khoản hoặc mật khẩu không chính sác</h2>'; 
+                        errLogin.innerHTML = '<h2 id="errForm">Tên tài khoản hoặc mật khẩu không chính xác</h2>'; 
                 }
            })
 
