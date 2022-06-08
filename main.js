@@ -33,3 +33,21 @@ function closeUser(){
     document.querySelector('.changeName').style.display = 'none';
     document.querySelector('.header__navbar-use-img').style.display = 'none';
 }
+
+// heart
+
+function heartWhile(){
+    const heartWhile = document.querySelector('.home-product-item__like--icon--while');
+    const heartRed = document.querySelector('.home-product-item__like--icon--red');
+    heartRed.style.display = 'block';
+    heartWhile.style.display = 'none'
+    }
+
+    function heartRed(){
+    const heartWhile = document.querySelector('.home-product-item__like--icon--while');
+        const heartRed = document.querySelector('.home-product-item__like--icon--red');
+        heartRed.style.display = 'none';
+         heartWhile.style.display = 'block'
+   }
+
+
